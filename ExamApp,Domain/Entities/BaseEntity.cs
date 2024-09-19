@@ -8,6 +8,6 @@ namespace ExamApp_Domain.Entities
         public int Id { get; set; }
 
         public DateTime CreatedAt { get; set; }
-        public DateTime? UpdatetAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }

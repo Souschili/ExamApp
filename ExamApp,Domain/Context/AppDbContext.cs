@@ -35,7 +35,7 @@ namespace ExamApp_Domain.Context
                 }
                 else
                 {
-                    item.Entity.UpdatetAt = DateTime.UtcNow;
+                    item.Entity.UpdatedAt = DateTime.UtcNow;
                 }
 
             }
