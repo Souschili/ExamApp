@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ExamApp_Domain.Context
 {
-    internal class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<Subject> Subjects => Set<Subject>();
         public DbSet<Student> Students => Set<Student>();
