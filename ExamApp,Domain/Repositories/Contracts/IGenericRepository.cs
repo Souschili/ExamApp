@@ -2,7 +2,7 @@
 
 namespace ExamApp_Domain.Repositories.Contracts
 {
-    internal interface IGenericRepository<TEntity> where TEntity : BaseEntity, new()
+    public interface IGenericRepository<TEntity> where TEntity : BaseEntity, new()
     {
         Task CreateAsync(TEntity entity);
         Task<IEnumerable<TEntity>> GetAllAsync();
