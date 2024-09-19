@@ -1,6 +1,6 @@
 ﻿namespace ExamApp_Domain.Entities
 {
-    public class Student : BaseEntity
+    public sealed class Student : BaseEntity
     {
         public ushort StudentNumber { get; set; } // number(5,0)
         public string Firstname { get; set; } = string.Empty; // varchar(30)

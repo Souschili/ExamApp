@@ -1,6 +1,6 @@
 ﻿namespace ExamApp_Domain.Entities
 {
-    public class Subject : BaseEntity
+    public sealed class Subject : BaseEntity
     {
         public string SubjectCode { get; set; } = string.Empty; // char (3)
         public string SubjectName { get; set; }= string.Empty; // varchar(30)
