@@ -2,7 +2,7 @@
 
 namespace ExamApp_Domain.Repositories.Contracts
 {
-    public interface IStudentRepository:IGenericRepository<Student>
+    public interface IStudentRepository : IGenericRepository<Student>
     {
         // add here specific or additional method 
     }
