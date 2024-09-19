@@ -14,28 +14,28 @@ namespace ExamApp_Domain.Repositories
             _context = context;
         }
 
-        public async Task CreateAsync(TEntity entity)
+        public virtual async Task CreateAsync(TEntity entity)
         {
             await _context.Set<TEntity>().AddAsync(entity);
             await _context.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(int id)
+        public virtual Task DeleteAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<TEntity>> GetAllAsync()
+        public virtual Task<IEnumerable<TEntity>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<TEntity> GetByIdAsync(int id)
+        public virtual Task<TEntity> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(TEntity entity)
+        public virtual Task UpdateAsync(TEntity entity)
         {
             throw new NotImplementedException();
         }
