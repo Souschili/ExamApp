@@ -12,12 +12,12 @@ namespace ExamApp.Services.DTOs.DTOValidator
 
             RuleFor(x => x.Firstname)
                 .NotEmpty()
-                .Length(1, 30)
+                .Length(3, 30) // Ali min length
                 .WithMessage("Firstname cannot be empty and must be up to 30 characters long.");
 
             RuleFor(x => x.Lastname)
                 .NotEmpty()
-                .Length(1, 30)
+                .Length(5, 30)  // Aliyev min length
                 .WithMessage("Lastname cannot be empty and must be up to 30 characters long.");
 
             RuleFor(x => x.ClassNumber)
