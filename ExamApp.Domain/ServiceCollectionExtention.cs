@@ -16,7 +16,7 @@ namespace ExamApp.Domain
 
             services.AddDbContext<AppDbContext>(cfg =>
                 cfg.UseSqlServer(config.GetConnectionString("Local")
-                , x => x.MigrationsAssembly("ExamApp.Domain")));
+                , x => x.MigrationsAssembly("ExamApp.Api")));
 
             return services;
         }
