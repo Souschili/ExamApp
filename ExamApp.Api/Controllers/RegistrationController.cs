@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ExamApp.Services.DTOs;
+using ExamApp.Services.Services.Contract;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ExamApp.Api.Controllers
 {
@@ -6,5 +8,32 @@ namespace ExamApp.Api.Controllers
     [ApiController]
     public class RegistrationController : ControllerBase
     {
+        private readonly IRegistrationService _registrationService;
+
+        public RegistrationController(IRegistrationService registrationService)
+        {
+            _registrationService = registrationService;
+        }
+
+        [HttpPost("subjects")]
+        public async Task<IActionResult> SubjectRegistration(SubjectDto subjectDto)
+        {
+            await _registrationService.SubjectRegistrationAsync(subjectDto);
+            return NoContent();
+        }
+
+        [HttpPost("students")]
+        public async Task<IActionResult> StudentRegistration(StudentDto studentDto)
+        {
+            await _registrationService.StudentRegistrationAsync(studentDto);
+            return NoContent();
+        }
+
+        [HttpPost("exams")]
+        public async Task<IActionResult> ExamsRegistration(ExamDto examDto)
+        {
+            await _registrationService.ExamRegistrationAsync(examDto);
+            return NoContent();
+        }
     }
 }
