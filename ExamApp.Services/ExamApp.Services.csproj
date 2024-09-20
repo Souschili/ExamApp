@@ -10,4 +10,8 @@
     <ProjectReference Include="..\ExamApp.Domain\ExamApp.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\DTOValidator\" />
+  </ItemGroup>
+
 </Project>
