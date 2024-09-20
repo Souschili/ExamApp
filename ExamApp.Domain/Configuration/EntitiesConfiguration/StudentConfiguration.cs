@@ -12,7 +12,7 @@ namespace ExamApp.Domain.Configuration.EntitiesConfiguration
 
             builder.Property(x => x.StudentNumber)
                 .IsRequired()
-                .HasColumnType("number(5,0)");
+                .HasColumnType("int");
 
             builder.Property(x => x.Firstname)
                 .IsRequired()
@@ -26,7 +26,7 @@ namespace ExamApp.Domain.Configuration.EntitiesConfiguration
 
             builder.Property(x => x.ClassNumber)
                 .IsRequired()
-                .HasColumnType("number(2,0)");
+                .HasColumnType("tinyint");
 
         }
     }
