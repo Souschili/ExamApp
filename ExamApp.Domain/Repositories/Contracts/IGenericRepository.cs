@@ -1,6 +1,6 @@
-﻿using ExamApp_Domain.Entities;
+﻿using ExamApp.Domain.Entities;
 
-namespace ExamApp_Domain.Repositories.Contracts
+namespace ExamApp.Domain.Repositories.Contracts
 {
     public interface IGenericRepository<TEntity> where TEntity : BaseEntity, new()
     {

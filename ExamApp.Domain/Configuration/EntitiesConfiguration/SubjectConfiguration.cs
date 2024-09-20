@@ -1,8 +1,8 @@
-﻿using ExamApp_Domain.Entities;
+﻿using ExamApp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ExamApp_Domain.Configuration.EntitiesConfiguration
+namespace ExamApp.Domain.Configuration.EntitiesConfiguration
 {
     internal class SubjectConfiguration : IEntityTypeConfiguration<Subject>
     {

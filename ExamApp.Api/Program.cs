@@ -1,5 +1,4 @@
-
-using ExamApp_Domain;
+using ExamApp.Domain;
 
 namespace ExamApp.Api
 {
@@ -8,9 +7,10 @@ namespace ExamApp.Api
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            
-            builder.Services.AddDomainRepositories();
+
             builder.Services.AddDbContext(builder.Configuration);
+            builder.Services.AddDomainRepositories();
+            
             
 
             builder.Services.AddControllers();

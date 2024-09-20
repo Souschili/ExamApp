@@ -1,9 +1,9 @@
-﻿using ExamApp_Domain.Context;
-using ExamApp_Domain.Entities;
-using ExamApp_Domain.Repositories.Contracts;
+﻿using ExamApp.Domain.Context;
+using ExamApp.Domain.Entities;
+using ExamApp.Domain.Repositories.Contracts;
 
 
-namespace ExamApp_Domain.Repositories
+namespace ExamApp.Domain.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseEntity, new()
     {

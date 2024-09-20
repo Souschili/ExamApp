@@ -1,4 +1,4 @@
-﻿namespace ExamApp_Domain.Entities
+﻿namespace ExamApp.Domain.Entities
 {
     public sealed class Student : BaseEntity
     {

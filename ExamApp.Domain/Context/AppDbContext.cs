@@ -1,9 +1,9 @@
-﻿using ExamApp_Domain.Configuration.EntitiesConfiguration;
-using ExamApp_Domain.Entities;
+﻿using ExamApp.Domain.Configuration.EntitiesConfiguration;
+using ExamApp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace ExamApp_Domain.Context
+namespace ExamApp.Domain.Context
 {
     public class AppDbContext : DbContext
     {

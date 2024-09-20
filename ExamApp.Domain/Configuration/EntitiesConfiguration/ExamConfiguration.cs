@@ -1,9 +1,9 @@
-﻿using ExamApp_Domain.Entities;
+﻿using ExamApp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
-namespace ExamApp_Domain.Configuration.EntitiesConfiguration
+namespace ExamApp.Domain.Configuration.EntitiesConfiguration
 {
     internal class ExamConfiguration : IEntityTypeConfiguration<Exam>
     {
@@ -11,7 +11,7 @@ namespace ExamApp_Domain.Configuration.EntitiesConfiguration
         {
             builder.ToTable("Exam");
 
-            builder.Property(x=> x.SubjectCode)
+            builder.Property(x => x.SubjectCode)
                 .IsRequired()
                 .HasColumnType("char(3)");
 

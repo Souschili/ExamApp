@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamApp.Api", "ExamApp.Api\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamApp.Services", "ExamApp.Services\ExamApp.Services.csproj", "{957AC659-6830-4E0B-ABE2-FAB8F7DDC318}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamApp,Domain", "ExamApp,Domain\ExamApp,Domain.csproj", "{1BE8E4DF-1ABF-4231-8E6F-45D3D131FBC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamApp.Domain", "ExamApp.Domain\ExamApp.Domain.csproj", "{1BE8E4DF-1ABF-4231-8E6F-45D3D131FBC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,11 +1,11 @@
-﻿using ExamApp_Domain.Context;
-using ExamApp_Domain.Repositories;
-using ExamApp_Domain.Repositories.Contracts;
+﻿using ExamApp.Domain.Context;
+using ExamApp.Domain.Repositories;
+using ExamApp.Domain.Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ExamApp_Domain
+namespace ExamApp.Domain
 {
     public static class ServiceCollectionExtension
     {
@@ -15,7 +15,8 @@ namespace ExamApp_Domain
                 throw new ArgumentNullException(nameof(config));
 
             services.AddDbContext<AppDbContext>(cfg =>
-                cfg.UseSqlServer(config.GetConnectionString("Local")));
+                cfg.UseSqlServer(config.GetConnectionString("Local")
+                , x => x.MigrationsAssembly("ExamApp.Domain")));
 
             return services;
         }
