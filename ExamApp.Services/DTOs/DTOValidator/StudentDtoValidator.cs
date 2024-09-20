@@ -7,7 +7,7 @@ namespace ExamApp.Services.DTOs.DTOValidator
         public StudentDtoValidator()
         {
             RuleFor(x => x.StudentNumber)
-                .Must(x => x > 0 && x < 10000)
+                .Must(x => x > 0 && x < 100000)
                 .WithMessage("StudentNumber must be between 1 and 99999.");
 
             RuleFor(x => x.Firstname)
