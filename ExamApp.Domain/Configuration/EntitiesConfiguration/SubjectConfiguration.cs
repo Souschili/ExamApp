@@ -21,7 +21,7 @@ namespace ExamApp.Domain.Configuration.EntitiesConfiguration
 
             builder.Property(x => x.ClassNumber)
                 .IsRequired()
-                .HasColumnType("number(2,0)");
+                .HasColumnType("tinyint");
 
             builder.Property(x => x.TeacherFirstName)
                 .IsRequired()
