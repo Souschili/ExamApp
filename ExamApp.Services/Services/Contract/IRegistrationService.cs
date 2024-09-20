@@ -4,8 +4,8 @@ namespace ExamApp.Services.Services.Contract
 {
     public interface IRegistrationService
     {
-        Task SubjectRegistration(SubjectDto subjectDto);
-        Task StudentRegistration(StudentDto studentDto);
-        Task ExamRegistration(ExamDto examDto);
+        Task SubjectRegistrationAsync(SubjectDto subjectDto);
+        Task StudentRegistrationAsync(StudentDto studentDto);
+        Task ExamRegistrationAsync(ExamDto examDto);
     }
 }
