@@ -1,9 +1,8 @@
-﻿using FluentValidation;
+﻿using ExamApp.Services.Services;
+using ExamApp.Services.Services.Contract;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 
 namespace ExamApp.Services
@@ -14,7 +13,9 @@ namespace ExamApp.Services
         {
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly())
                 .AddFluentValidationAutoValidation(); // автовалидация в контроллере
-            // TODO: register services
+            services.AddAutoMapper(Assembly.GetExecutingAssembly()); // забираем все профайлы
+
+            services.AddScoped<IRegistrationService, RegistrationService>();
 
             return services;
         }
