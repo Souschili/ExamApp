@@ -1,4 +1,5 @@
 using ExamApp.Domain;
+using ExamApp.Services;
 
 namespace ExamApp.Api
 {
@@ -10,7 +11,7 @@ namespace ExamApp.Api
 
             builder.Services.AddDbContext(builder.Configuration);
             builder.Services.AddDomainRepositories();
-
+            builder.Services.AddApplicationServices();
 
 
             builder.Services.AddControllers();
