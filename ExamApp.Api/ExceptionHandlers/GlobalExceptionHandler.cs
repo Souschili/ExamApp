@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace ExamApp.Api.ExceptionHandlers
 {
@@ -33,7 +34,8 @@ namespace ExamApp.Api.ExceptionHandlers
                 // used only in development, id field empty or null it hided in responce )
                 Instance = instance + trace // show path + code line number
             };
-            _logger.LogError("Unhandle exception Info {@problemDetail}", problemDetail);
+            var problemDetailJson = JsonSerializer.Serialize(problemDetail);
+            _logger.LogError("Unhandle exception Info {@problemDetail}", problemDetailJson);
             await httpContext.Response.WriteAsJsonAsync(problemDetail, cancellationToken);
 
             return true;

@@ -18,7 +18,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpPost("subjects")]
-        public async Task<IActionResult> SubjectRegistration([FromBody]SubjectDto subjectDto)
+        public async Task<IActionResult> SubjectRegistration([FromBody] SubjectDto subjectDto)
         {
             _logger.LogInformation("Register subject {@subject}", subjectDto);
             await _registrationService.SubjectRegistrationAsync(subjectDto);
@@ -26,7 +26,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpPost("students")]
-        public async Task<IActionResult> StudentRegistration([FromBody]StudentDto studentDto)
+        public async Task<IActionResult> StudentRegistration([FromBody] StudentDto studentDto)
         {
             _logger.LogInformation("Register student {@student}", studentDto);
             await _registrationService.StudentRegistrationAsync(studentDto);
