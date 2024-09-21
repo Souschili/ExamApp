@@ -2,9 +2,9 @@
 {
     public class StudentDto
     {
-        public required int StudentNumber { get; init; } // number(5,0)
-        public required string Firstname { get; init; } = string.Empty; // varchar(30)
-        public required string Lastname { get; init; } = string.Empty; // varchar(30)
-        public required byte ClassNumber { get; init; } // number(2,0) 
+        public required int StudentNumber { get; init; } 
+        public required string Firstname { get; init; } = string.Empty; 
+        public required string Lastname { get; init; } = string.Empty; 
+        public required byte ClassNumber { get; init; }  
     }
 }
