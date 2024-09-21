@@ -7,10 +7,12 @@ namespace ExamApp.Api.ExceptionHandlers
     internal sealed class GlobalExceptionHandler : IExceptionHandler
     {
         private readonly IHostEnvironment _environment;
+        private readonly ILogger<GlobalExceptionHandler> _logger;
 
-        public GlobalExceptionHandler(IHostEnvironment environment)
+        public GlobalExceptionHandler(IHostEnvironment environment, ILogger<GlobalExceptionHandler> logger)
         {
             _environment = environment;
+            _logger = logger;
         }
         public async ValueTask<bool> TryHandleAsync(HttpContext httpContext,
             Exception exception,
@@ -31,7 +33,7 @@ namespace ExamApp.Api.ExceptionHandlers
                 // used only in development, id field empty or null it hided in responce )
                 Instance = instance + trace // show path + code line number
             };
-
+            _logger.LogError("Unhandle exception Info {@problemDetail}", problemDetail);
             await httpContext.Response.WriteAsJsonAsync(problemDetail, cancellationToken);
 
             return true;
