@@ -7,7 +7,6 @@ namespace ExamApp.Services.DTOs.Profiles
     {
         public ExamProfile()
         {
-          
             // тут правила чуток другие изза того что в дто строка,
             // а надо преобразовать в DateOnly и обратно
             CreateMap<ExamDto, Exam>()
