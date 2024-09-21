@@ -16,7 +16,9 @@ namespace ExamApp.Domain
 
             services.AddDbContext<AppDbContext>(cfg =>
                 cfg.UseSqlServer(config.GetConnectionString("Local")
-                , x => x.MigrationsAssembly("ExamApp.Api")));
+                , x => x.MigrationsAssembly("ExamApp.Api"))
+                .EnableSensitiveDataLogging() // с этой херней аккуратней выводит в лог параметры запроса
+                );
 
             return services;
         }
