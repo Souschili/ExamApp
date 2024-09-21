@@ -1,6 +1,6 @@
 ﻿namespace ExamApp.Services.DTOs
 {
-    public class ExamDto
+    public record class ExamDto
     {
         public required string SubjectCode { get; init; } = string.Empty;
         public required int StudentNumber { get; init; }
