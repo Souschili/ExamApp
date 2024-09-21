@@ -19,7 +19,7 @@ namespace ExamApp.Api.ExceptionHandlers
             // stacktrace info include where in code exception occured,
             // only for development :-)
             string trace = _environment.IsDevelopment() ? GetFirstStackTraceLine(exception) : string.Empty;
-            string instance = _environment.IsDevelopment() ? $"{httpContext.Request.Method} {httpContext.Request.Path}\n {trace}" :
+            string instance = _environment.IsDevelopment() ? $"{httpContext.Request.Method} {httpContext.Request.Path}\n" :
                             string.Empty;
             var problemDetail = new ProblemDetails
             {
