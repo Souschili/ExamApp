@@ -2,20 +2,23 @@
 
 namespace ExamApp.Services.DTOs.DTOValidator
 {
+    // сами настроите правила если надо более конкретно
     public class ExamDtoValidator : AbstractValidator<ExamDto>
     {
         public ExamDtoValidator()
         {
             RuleFor(x => x.SubjectCode)
-                .NotEmpty()
+                //.NotEmpty()
                 .Length(3)
                 .WithMessage("SubjectCode must be exactly 3 characters long.");
 
             RuleFor(x => x.StudentNumber)
+                //.NotEmpty()
                 .Must(x => x > 1 && x < 100000)
                 .WithMessage("StudentNumber must be between 1 and 99999.");
 
             RuleFor(x => x.Date)
+                .NotEmpty()
                 .Must(date =>
                 {
                     if (string.IsNullOrWhiteSpace(date)) return false; // Проверка на пустоту
@@ -25,6 +28,7 @@ namespace ExamApp.Services.DTOs.DTOValidator
                 .WithMessage("Date must be in the format yyyy-MM-dd or MM/dd/yyyy and must not be in the future.");
 
             RuleFor(x => x.Mark)
+                //.NotEmpty()
                 .Must(x => x > 0 && x < 6) // возможно максимальная оценка 5
                 .WithMessage("Mark must be between 1 and 5.");
         }

@@ -2,13 +2,14 @@
 
 namespace ExamApp.Services.DTOs.DTOValidator
 {
+    // сами настроите правила если надо более конкретно
     public class SubjectDtoValidator : AbstractValidator<SubjectDto>
     {
         public SubjectDtoValidator()
         {
             // SubjectCode: exactly 3 characters
             RuleFor(x => x.SubjectCode)
-                .NotEmpty()
+                //.NotEmpty()
                 .Length(3)
                 .WithMessage("SubjectCode must consist of exactly 3 characters.");
 
@@ -20,7 +21,7 @@ namespace ExamApp.Services.DTOs.DTOValidator
 
             // ClassNumber: byte (0-255), rule for valid range 1 to 12
             RuleFor(x => x.ClassNumber)
-                .Must(x => x > 0 && x < 12)
+                .Must(x => x > 0 && x < 12) // если это не класс с 1 по 11 а номер кабинета то просто сбрось лимиты
                 .WithMessage("ClassNumber must be between 1 and 11.");
 
 
