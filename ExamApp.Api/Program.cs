@@ -12,6 +12,7 @@ namespace ExamApp.Api
             builder.Services.AddDbContext(builder.Configuration);
             builder.Services.AddDomainRepositories();
             builder.Services.AddApplicationServices();
+            builder.Services.AddExceptionHandlers();
 
 
             builder.Services.AddControllers();
@@ -21,6 +22,7 @@ namespace ExamApp.Api
 
             var app = builder.Build();
 
+            app.UseExceptionHandler();
 
             if (app.Environment.IsDevelopment())
             {
