@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamApp.Services", "ExamApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamApp.Domain", "ExamApp.Domain\ExamApp.Domain.csproj", "{C2C68303-A5BF-45F4-80FD-9CFF0815D512}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamAppTests", "ExamAppTests\ExamAppTests.csproj", "{C4184326-3AC4-48DD-A29B-FFE9887B975C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C2C68303-A5BF-45F4-80FD-9CFF0815D512}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2C68303-A5BF-45F4-80FD-9CFF0815D512}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2C68303-A5BF-45F4-80FD-9CFF0815D512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4184326-3AC4-48DD-A29B-FFE9887B975C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4184326-3AC4-48DD-A29B-FFE9887B975C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4184326-3AC4-48DD-A29B-FFE9887B975C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4184326-3AC4-48DD-A29B-FFE9887B975C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
