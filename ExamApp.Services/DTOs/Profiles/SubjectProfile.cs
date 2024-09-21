@@ -7,8 +7,11 @@ namespace ExamApp.Services.DTOs.Profiles
     {
         public SubjectProfile()
         {
-            // в обе стороны так как имена полей идентичны
-            CreateMap<SubjectDto, Subject>().ReverseMap();
+
+            CreateMap<SubjectDto, Subject>()
+                .ForMember(dest => dest.ClassNumber, cfg => cfg.MapFrom(src => (byte)src.ClassNumber))
+                .ReverseMap()
+                .ForMember(dest => dest.ClassNumber, cfg => cfg.MapFrom(src => (int)src.ClassNumber));
         }
     }
 }
