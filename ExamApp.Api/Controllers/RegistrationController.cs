@@ -15,12 +15,6 @@ namespace ExamApp.Api.Controllers
             _registrationService = registrationService;
         }
 
-        [HttpGet]
-        public IActionResult Get()
-        {
-            throw new NotImplementedException("We check our exception handler");
-        }
-
         [HttpPost("subjects")]
         public async Task<IActionResult> SubjectRegistration(SubjectDto subjectDto)
         {
