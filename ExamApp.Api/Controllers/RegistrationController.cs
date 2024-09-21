@@ -22,7 +22,7 @@ namespace ExamApp.Api.Controllers
         {
             _logger.LogInformation("Register subject {@subject}", subjectDto);
             await _registrationService.SubjectRegistrationAsync(subjectDto);
-            return NoContent();
+            return Created();
         }
 
         [HttpPost("students")]
@@ -30,7 +30,7 @@ namespace ExamApp.Api.Controllers
         {
             _logger.LogInformation("Register student {@student}", studentDto);
             await _registrationService.StudentRegistrationAsync(studentDto);
-            return NoContent();
+            return Created();
         }
 
         [HttpPost("exams")]
@@ -38,7 +38,7 @@ namespace ExamApp.Api.Controllers
         {
             _logger.LogInformation("Register exam {@exam}", examDto);
             await _registrationService.ExamRegistrationAsync(examDto);
-            return NoContent();
+            return Created();
         }
     }
 }
